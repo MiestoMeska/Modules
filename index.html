@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="description" content="Modulinių ir išskirtinių namų gamyba, sttyba ir nuoma">
+    <title>Baltic Modules | Modulinių namų statyba</title>
+</head>
+
+<body onload="populateGaleryData(), filterGaleryData(), drawGalery()">
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+
+            let projectsArr = []
+            let filteredArr = []
+
+
+            function populateGaleryData() {
+                // Creates projects data array of objects based on random number 
+                document.getElementById('projects-showing')
+                const optionsArr = [
+                    [1, 2, 3, 4, 5, 6],
+                    ["Kempingo nameliai", "Komercinės patalpos", "Gyvenamasis namas"],
+                    ["Ligoninė", "Darželis", "Mokykla", "Gyvenamasis namas"],
+                    ["2018. Lietuva", "2019. Danija", "2020. Norvegija"],
+                    ["Mod", "Spec"]
+                ]
+                let total = Math.round(Math.random() * 48);
+                let i = 0;
+                let tmp = 0
+
+                while (i < total) {
+                    tmp = Math.random();
+                    projectsArr.push({
+                        id: optionsArr[0][Math.round(tmp * 5)],
+                        name: optionsArr[1][Math.round(tmp * 2)],
+                        buildingType: optionsArr[2][Math.round(tmp * 3)],
+                        date: optionsArr[3][Math.round(tmp * 2)],
+                        type: optionsArr[4][Math.round(tmp * 1)]
+                    });
+                    i++;
+                }
+            }
+
+            function filterGaleryData() {
+                // Filter of projects data array
+                filterModular = document.getElementById('modularFilter');
+                filterSpecial = document.getElementById('specialFilter');
+                if (filterModular.checked === true & filterSpecial.checked === true) {
+                    filteredArr = projectsArr;
+                } else if (filterModular.checked === true & filterSpecial.checked === false) {
+                    filteredArr = projectsArr.filter((f) => f.type === filterModular.name)
+                } else if (filterModular.checked === false & filterSpecial.checked === true) {
+                    filteredArr = projectsArr.filter((f) => f.type === filterSpecial.name)
+                } else if (filterModular.checked === false & filterSpecial.checked === false) {
+                    filteredArr = []
+                }
+                drawGalery()
+            }
+
+            function drawGalery() {
+                let i = 0;
+                let j = 0;
+                let galery = document.getElementById('galery-completed');
+                let info = document.getElementById('projects-showing')
+                let template = document.createElement('div')
+
+
+
+
+                let galeryContent = "";
+                if (filteredArr.length < 8) {
+                    i = 8 - filteredArr.length
+                }
+                while (i < 8) {
+                    //  galeryContent = galeryContent += "<div class='showcase shadow' onclick='showContent(this)' style='padding:5%'><div class='bg-image-full' style='position:relative; background-image: url(../dist/img/projects/Project"+filteredArr[j].id+"_small.jpg);' ><div style='background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%); width:100%; height:100%; opacity:0.4; position:absolute '></div><div class='showcase-tag text-small'>"+filteredArr[j].buildingType+"</div><div style='position: absolute; bottom: 0; padding:5%'><div class='text-small' style='color:white; font-size: 1rem'>"+filteredArr[j].date+"</div><div class='text-medium' style='color:white; font-size: 1.5rem'>"+filteredArr[j].name+"</div></div></div></div>";
+                    galeryContent = galeryContent += "<div class='showcase shadow' onclick='showContent(this)' style='padding:5%'><div class='showcase-container'><img class='showcase-image' style='position:absolute; height: 100%' src='img/projects/Project" + filteredArr[j].id + "_small.jpg' ><div style='position:absolute;background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%); width:100%; height:100%; opacity:0.4; position:absolute '></div><div class='showcase-tag text-small'>" + filteredArr[j].buildingType + "</div><div style='position: absolute; bottom: 0; padding:5%'><div class='text-small' style='color:white; font-size: 1rem'>" + filteredArr[j].date + "</div><div class='text-medium' style='color:white; font-size: 1.5rem'>" + filteredArr[j].name + "</div></div></div></div></div>";
+                    i++;
+                    j++;
+                }
+                info.innerHTML = "Rodomi " + j + " iš " + filteredArr.length + " projektų"
+                galery.innerHTML = galeryContent;
+            }
+        </script>
+    <!-- OVERLAY -->
+    <!-- Close Button -->
+<button class=" btn blue no-bg text-large" id="close-overlay" onclick="closeOverlay()">X</button>
+    <div id="overlay" class="overlay centered">
+        <div id="overlay-container" class="centered">
+        </div>
+    </div>
+    <!-- NAV BAR -->
+    <div id="nav-bar">
+        <div class="wrapped centered grid" id="nav-container">
+            <img id="nav-logo" style="aspect-ratio: 4/1;" src="img/logos/BM_logo_full.svg"alt="UAB Baltic Modules">
+            <ul class="nav-menu flex text-medium" id="nav-menu">
+                <li>
+                    <a class="nav-link" href="#projects-completed">Gaminiai</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#about">Apie mus</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#special-projects">Gamyba</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#modular-rent">Nuoma</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#footer">Kontaktai</a>
+                </li>
+            </ul>
+            <div class="lang-container ">
+                <div id="lang-dropdown" class="lang-dropdown grid" onmouseleave="closeLangSelect()" >
+                    <button id="lang-LT lang-current" class="lang-select lang-current flex centered text-medium" onclick="openLangSelect()"><img id="globe" src="img/icons/globe.svg" alt="">LT&nbsp;&nbsp;<img id="arrow_d" src="img/icons/Arrow_d.svg" alt=""></img></button>
+                    <button id="lang-EN" class="hide lang-select lang-option text-medium" onclick="closeLangSelect()">EN</button>
+                    <button id="lang-RU" class="hide lang-select lang-option text-medium" onclick="closeLangSelect()">RU</button>
+                </div>
+            </div>
+            <button class="btn small bordered light text-medium">
+                <span class="icon chat"></span>
+                <p>
+                    Gauti pasiūlymą
+                </p>
+            </button>
+        </div>
+    </div>
+
+    <!-- LANDING -->
+    <div id="landing-about">
+        <div class="anchor"></div>
+
+        <img id="landing-bg" src="img/bgs/Landing_x-small.jpg" alt="" srcset="img/bgs/Landing_large.jpg 1920w,img/bgs/Landing_medium.jpg 1200w,img/bgs/Landing_small.jpg 960w,img/bgs/Landing_x-small.jpg 640w,">
+        <div id="landing-container" class="wrapped">
+            <div>
+                <p class="text-title">Modulinių<br>namų statyba</p>
+                <p class="text-medium">nuo 2006 m.</p>
+            </div>
+            <div>
+                <img class="icon-large" src="img/icons/Key.svg" alt="">
+                <p class="text-small">Greitas apčiuopiamo vaizdo rezultatas, bet kuriuo metų laiku – tiesiai iš mūsų
+                    gamyklos</p>
+            </div>
+            <div>
+                <img class="icon-large" src="img/icons/Client.svg" alt="">
+                <p class="text-small">Kiekvienam klientui sąmatos sudaromos individualiai, pagal jo norus ir
+                    pageidavimus</p>
+            </div>
+            <div>
+                <img class="icon-large" src="img/icons/Target.svg" alt="">
+                <p class="text-small">Įgyjome pakankamai patirties, kad galėtume pasiūlyti aukštą kokybę atitinkantį
+                    produktą</p>
+            </div>
+            <div id="landing-about-3">
+                <button class="btn no-bg" id="play-presentation" onclick="playVideo()">
+                    <video id="video-presentation"></video>
+                    <div id="icon-play"></div>
+                    <p class="text-medium">Žiūrėti video pristatymą</p>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- <span class="icon-play"></span> -->
+
+    <!-- MODULAR PRODUCTS -->
+
+
+
+
+    <div id="modular-products">
+        <div class="anchor"></div>
+        <div class="wrapped">
+            <p class="text-title">Moduliniai gaminiai</p>
+            <div class="grid horizontal-2">
+                <div class="wide showcase shadow" onclick="showContent(this)">
+                    <div class="showcase-container">
+                        <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/PB_fallback.jpg" alt="" srcset="img/projects/PB.jpg 1920w, img/projects/PB_small.jpg 1200w, img/projects/PB_fallback.jpg 800w"></img>
+                        <div class="showcase-text">
+                        <div class="showcase-tag text-small">nuo 400 Eur/m&sup2;</div>
+                        <div class="grid showcase-footer">
+                            <div>
+                                <p class="text-large showcase-name">PB</p>
+                                <p class="text-small showcase-about">
+                                    Standartinių modulių pavyzdžiai, lengvai jungiami
+                                    vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                </p>
+                            </div>
+                            <div class="m2">
+                                <p class="text-small" style="font-weight:600; margin-bottom: -10%;">nuo</p>
+                                <div class="flex showcase-dimensions">
+                                    <p class="text-large">28,8
+                                        <p class="text-small">m&sup2;</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="wide showcase shadow" onclick="showContent(this)">
+                    <div class="showcase-container">
+                        <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/MaxiFlex_fallback.jpg" alt="" srcset="img/projects/MaxiFlex.jpg 1920w, img/projects/MaxiFlex_small.jpg 1200w, img/projects/MaxiFlex_fallback.jpg 800w"></img>
+                        <div class="showcase-text">
+                            <div class="showcase-tag text-small">nuo 650 Eur/m&sup2;</div>
+                            <div class="grid showcase-footer">
+                                <div>
+                                    <p class="text-large showcase-name">Maxi Flex</p>
+                                    <p class="text-small showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <div class="flex showcase-dimensions">
+                                        <p class="text-large">31,68<p class="text-small">m&sup2;</p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modular-triple" class="grid horizontal-3">
+                <div class="showcase shadow" onclick="showContent(this)">
+                    <div class="showcase-container">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/Multi_fallback.jpg" alt="" srcset="img/projects/Multi.jpg 1920w, img/projects/Multi_small.jpg 1200w,  img/projects/Multi_fallback.jpg 800w"></img>
+                        <div class="showcase-text">
+                            <div class="showcase-tag text-small">nuo 650 Eur/m&sup2;</div>
+                            <div class="grid showcase-footer">
+                                <div>
+                                    <p class="text-large showcase-name">Multi</p>
+                                    <p class="text-small showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <div class="flex showcase-dimensions">
+                                        <p class="text-large">43,2
+                                            <p class="text-small">m&sup2;</p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase shadow" onclick="showContent(this)">
+                    <div class="showcase-container">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/KM15_fallback.jpg" alt="" srcset="img/projects/KM15.jpg 1920w, img/projects/KM15_small.jpg 1200w, img/projects/KM15_fallback.jpg 800w"></img>
+                        <div class="showcase-text">
+                            <div class="showcase-tag text-small">nuo 900 Eur/m&sup2;</div>
+                            <div class="grid showcase-footer">
+                                <div>
+                                    <p class="text-large showcase-name">KM 15</p>
+                                    <p class="text-small showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <div class="flex showcase-dimensions">
+                                        <p class="text-large">54,3
+                                            <p class="text-small">m&sup2;</p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase shadow" onclick="showContent(this)">
+                    <div class="showcase-container">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/BlueLine_fallback.jpg" alt="" srcset="img/projects/BlueLine.jpg 1920w, img/projects/BlueLine_small.jpg 1200w, img/projects/BlueLine_fallback.jpg 800w"></img>
+                        <div class="showcase-text">
+                            <div class="showcase-tag text-small">nuo 900 Eur/m&sup2;</div>
+                            <div class="grid showcase-footer">
+                                <div>
+                                    <p class="text-large showcase-name">Blue Line</p>
+                                    <p class="text-small showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <div class="flex showcase-dimensions">
+                                        <p class="text-large">2,62
+                                            <p class="text-small">m&sup2;</p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPECIAL PROJECTS -->
+
+    <div id="special-projects">
+        <div class="anchor"></div>
+        <div class="wrapped bg grid horizontal-2">
+            <div  class="text-container-2 grid">
+                <p class="text-title">Individualūs projektai</p>
+                <p class="text-small about">Jei neradote patinkančio namo projekto ar norite kažko savito ir
+                    individualaus, o gal turite nestandartinių formų sklypą ? Tuomet užpildykite techninės užduoties
+                    anketą ir mes paruošime pagal Jūsų norus ir turimą sklypą atitinkantį projektą. Patikėkite mums savo
+                    norus kuriant Jūsų svajonių namus. Pateikiame tik keletą iš mūsų individualiai sukurtų namų projekų.
+                </p>
+                <div class="flex">
+                    <button class="btn large blue text-medium">
+                        <span class="icon chat"></span>
+                        <p>Gauti pasiūlymą</p>
+                    </button>
+                    <button class="btn small light special no-bg text-medium">
+                        <span class="icon camera"></span>
+                        <p>Žiūrėti galeriją</p>
+                    </button>
+                </div>
+            </div>
+            <div class="img-container">
+                <img id="special-img" src="img/projects/SpecialProjects_small.png" srcset="img/projects/SpecialProjects.png 1920w, img/projects/SpecialProjects_medium.png 1200w, img/projects/SpecialProjects_small.png 640w" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS COMPLETED -->
+
+    <div id="projects-completed">
+        <div class="anchor"></div>
+        <div class="wrapped">
+            <div class="flex">
+                <p class="text-title">Įgyvendinti projektai</p>
+                <div id="filter-completed" class="flex">
+                    <p class="text-small">Rodomi:&nbsp;</p>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="modularFilter" name="Mod" checked onchange="filterGaleryData()">
+                        <label for="modularFilter">Moduliniai projektai</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="specialFilter" name="Spec" checked onchange="filterGaleryData()">
+                        <label for="specialFilter">Individualūs projektai</label>
+                    </div>
+                </div>
+            </div>
+            <div id="galery-completed">
+
+            </div>
+            <div id="projects-completed-footer" class="flex">
+                <button class="btn light small bordered text-medium">
+                    <p>Visi projektai</p>
+                    <div class="icon arrow"></div>
+                </button>
+                <p id="projects-showing" class="text-small">Rodomi 8 iš 48 projektų</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODULAR RENT -->
+
+    <div id="modular-rent">
+        <div class="anchor"></div>
+        <div class="wrapped bg grid horizontal-2">
+            <div class="text-container-2 grid">
+                <p class="text-title">Modulinių patalpų nuoma</p>
+                <p class="text-small about">Modulinėse patalpose iš anksto, pagal kliento pageidavimus numatyta visa
+                    komforto įranga, visos reikalingos komunikacijos – vandentiekis, šildymas, elektra, rekuperacinė
+                    vėdinimo sistema. Labai dažnai verslininkai bando savo konkretiems tikslams pritaikyti senas
+                    patalpas,
+                    bet jas įrengti pagal poreikius dažnai kainuoja brangiau nei statyti naujas. Dėl to ir buvo
+                    sumanytas
+                    toks aprūpinimo patalpomis modelis.</p>
+                <button class="btn blue large bordered text-medium">
+                    <span class="icon chat"></span>
+                    <p>Rinktis modulį</p>
+                </button>
+            </div>
+            <div class="img-container">
+                <img id="rent-img" src="img/projects/ModularRent_fallback.png" srcset="img/projects/ModularRent.png 1920w, img/projects/ModularRent_medium.png 1200w, img/projects/ModularRent_small.png 800w, img/projects/ModularRent_fallback.png 480w" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- STORAGE OFFER -->
+
+    <div id="storage-offer">
+        <div class="anchor"></div>
+        <div class="wrapped">
+            <p class="text-title">Turime sandelyje</p>
+            <div id="storage-triple" class="grid horizontal-3">
+                <div class="showcase shadow" onclick="showContent(this)">
+                    <div class="showcase-container">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/Multi_fallback.jpg" alt="" srcset="img/projects/Multi.jpg 1920w, img/projects/Multi_small.jpg 1200w, img/projects/Multi_fallback.jpg 800w"></img>
+                        <div class="showcase-text">
+                            <div class="showcase-tag text-small">nuo 650 Eur/m&sup2;</div>
+                            <div class="grid showcase-footer">
+                                <div>
+                                    <p class="text-large showcase-name">Multi</p>
+                                    <p class="text-small showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <div class="flex showcase-dimensions">
+                                        <p class="text-large">43,2
+                                        <p class="text-small">m&sup2;</p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase shadow" onclick="showContent(this)">
+                    <div class="showcase-container">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/KM15_fallback.jpg" alt="" srcset="img/projects/KM15.jpg 1920w, img/projects/KM15_small.jpg 1200w, img/projects/KM15_fallback.jpg 800w"></img>
+                        <div class="showcase-text">
+                            <div class="showcase-tag text-small">nuo 900 Eur/m&sup2;</div>
+                            <div class="grid showcase-footer">
+                                <div>
+                                    <p class="text-large showcase-name">KM 15</p>
+                                    <p class="text-small showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <div class="flex showcase-dimensions">
+                                        <p class="text-large">54,3
+                                        <p class="text-small">m&sup2;</p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase shadow" onclick="showContent(this)">
+                    <div class="showcase-container">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/BlueLine_fallback.jpg" alt="" srcset="img/projects/BlueLine.jpg 1920w, img/projects/BlueLine_small.jpg 1200w, img/projects/BlueLine_fallback.jpg 800w"></img>
+                        <div class="showcase-text">
+                            <div class="showcase-tag text-small">nuo 900 Eur/m&sup2;</div>
+                            <div class="grid showcase-footer">
+                                <div>
+                                    <p class="text-large showcase-name">Blue Line</p>
+                                    <p class="text-small showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <div class="flex showcase-dimensions">
+                                        <p class="text-large">2,62
+                                        <p class="text-small">m&sup2;</p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn light small bordered text-medium">
+                <p>
+                    Visi moduliai
+                </p>
+                <div class="icon arrow"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+
+    <div id="about">
+        <div class="anchor"></div>
+        <div id="about-content" class="wrapped grid">
+            <div id="text-about" class="text-container-2">
+                <p class="text-xlarge">Apie mus</p>
+                <p class="text-small about">UAB „Baltic Modules“ – tai dukterinė Danijos kompanijos įmonė, Lietuvoje
+                    gyvuojanti jau 10 metų. Per šiuos metus
+                    sugebėjome įgyti pakankamai patirties, kad galėtumėme pasiūlyti aukštą kokybę atitinkantį produktą.
+                    Mūsų
+                    įmonėje nuolat
+                    dirba apie 30 žmonių, kurie yra kvalifikuoti savo sričių specialistai. Mes padėsime Jums realizuoti
+                    savo
+                    idėjas,
+                    pasidalinsime savo žiniomis ir sukaupta patirtimi norėdami padėti rasti Jums optimaliausią, Jūsų
+                    norus
+                    atitinkantį
+                    variantą</p>
+                <button class="btn light small special no-bg text-medium">
+                    <p>
+                        Plačiau apie mus
+                    </p>
+                    <div class="icon arrow"></div>
+                </button>
+            </div>
+            <div id="manufacture" class="text-container-2">
+                <p class="text-xlarge">Gamyba</p>
+                <p class="text-small about">Vakarų Europa jau senai žengia koja kojon su technologijomis, mada,
+                    neapsunkina savo gyvenimo ilgais pasiruošimo ir
+                    statybos procesais norint pasirūpinti nuosavu gyvenamuoju namu, administracinėmis ar
+                    komercinėmis
+                    patalpomis – jie
+                    renkasi modulius.</p>
+                <button class="btn light long special no-bg text-medium">
+                    <p>
+                        Plačiau apie gamybą
+                    </p>
+                    <div class="icon arrow"></div>
+                </button>
+            </div>
+            <div class="img-container">
+                <img id="guy-img" style="aspect-ratio:1/1.5 ;" src="img/projects/Guy_fallback.jpg" alt="" srcset="img/projects/Guy.jpg 1920w, img/projects/Guy_small.jpg 1200w,  img/projects/Guy_fallback.jpg 800w">
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+
+    <div id="footer" class="grid">
+        <div id="contact-area">
+            <input class="btn long text-medium" type="text" name="Contact" id="footer-contact-input"
+                placeholder="Jūsų telefonas arba el. paštas">
+            <div class="spacer"></div>
+            <button class="btn long dark text-medium">
+                <span class="icon chat"></span>
+                <p> Gauti pasiūlymą</p>
+            </button>
+        </div>
+        <div id="links-area" class="grid">
+            <div id="baltic-modules" class="contacts">
+                <div class="text-medium link">+370 650 70474</div>
+                <div class="text-small link">info@balticmodules.lt</div>
+                <div class="link flex">
+                    <img id="icon-waypoint" class="icon-small" src="img/icons/WayPoint-white.svg" alt="" srcset="">
+                    <p class='text-xsmall'>Vaidaugų g. 1, Toleikių km., Dovilų sen., LT-95387, Klaipėdos raj.</p>
+                </div>
+            </div>
+            <div id="quality-certs" class="grid">
+                <p id="quality-certs-title" class="text-medium link">Kokybės sertifikatai</p>
+                <div id="certs-logos" class="grid">
+                    <div class="link" id="cert1">
+                        <img class="certImg" style="aspect-ratio:2/1 ;" src="img/logos/Iso.png" alt="" srcset="">
+                    </div>
+                    <div class="link" id="cert2">
+                        <img class="certImg" style="aspect-ratio:1/1 ;" src="img/logos/NordicEcolabel.png" alt="" srcset="">
+                    </div>
+                    <div class="link" id="cert3">
+                        <img class="certImg" style="aspect-ratio:1/1 ;" src="img/logos/Ecolabel.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div id="extra-links">
+                <img class="icon-large socials link " src="img/icons/Facebook.svg"></img>
+                <img class="socials link icon-large" src="img/icons/Youtube.svg"></img>
+                <p id="cwr" class="text-xsmall" style="color:#999999">&copy; 2019 UAB Baltic Modules</p>
+                <div class="flex" id="creator">
+                    <p class="text-xsmall" style="color:#999999">Sukūrė</p>
+                    <img id="creative-logo"  style="aspect-ratio:4/1 ;" class="link" src="img/logos/CreativePartner.png" alt=""></img>
+                </div>
+            </div>
+            <div id="footer-contact2">
+                <button class="btn small blue text-medium">
+                    <span class="icon chat"></span>
+                    <p>Klauskite mūsų</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
