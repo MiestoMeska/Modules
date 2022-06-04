@@ -88,7 +88,7 @@ function playVideo() {
     const video = document.createElement('img');
     const closeBtn = document.getElementById('close-overlay');
     const cloneBtn = closeBtn.cloneNode(true);
-    video.setAttribute("src", '/video/Presentation.gif');
+    video.setAttribute("src", 'Modules/video/Presentation.gif');
     video.classList.add('gif','presentation');
     video.style.height = '100%';
     video.style.width = '100%';
@@ -117,7 +117,6 @@ function showContent(el) {
     overlayContainer.appendChild(clone);
     overlayContainer.appendChild(cloneBtn);
     cloneBtn.style.display= 'flex';
-    console.log(el.classList.item(0))
 }
 
 function openOverlay() {
