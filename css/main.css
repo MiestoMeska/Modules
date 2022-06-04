@@ -232,7 +232,7 @@ ul {
     color: #FFFFFF; }
     .btn.blue .chat {
       background-image: url(../img/icons/MsgBox-white.svg); }
-  .btn p {
+  .btn .p {
     width: 10rem; }
   .btn .icon {
     height: 1.25rem;
