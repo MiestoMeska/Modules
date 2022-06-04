@@ -88,7 +88,7 @@ function playVideo() {
     const video = document.createElement('img');
     const closeBtn = document.getElementById('close-overlay');
     const cloneBtn = closeBtn.cloneNode(true);
-    video.setAttribute("src", 'img/Presentation.png');
+    video.setAttribute("src", 'https://raw.githubusercontent.com/MiestoMeska/Modules/main/video/Presentation.gif');
     video.classList.add('gif','presentation');
     video.style.height = '100%';
     video.style.width = '100%';
