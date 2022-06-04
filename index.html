@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
     <!-- NAV BAR -->
     <div id="nav-bar">
         <div class="wrapped centered grid" id="nav-container">
-            <img id="nav-logo" style="aspect-ratio: 4/1;" src="img/logos/BM_logo_full.svg"alt="UAB Baltic Modules">
+            <img id="nav-logo" style="aspect-ratio: 4/1;" src="img/logos/BM_logo_full.svg" alt="UAB Baltic Modules">
             <ul class="nav-menu flex text-medium" id="nav-menu">
                 <li>
                     <a class="nav-link" href="#projects-completed">Gaminiai</a>
@@ -42,16 +42,14 @@
             </ul>
             <div class="lang-container ">
                 <div id="lang-dropdown" class="lang-dropdown grid" onmouseleave="closeLangSelect()" >
-                    <button id="lang-LT lang-current" class="lang-select lang-current flex centered text-medium" onclick="openLangSelect()"><img id="globe" src="img/icons/globe.svg" alt="">LT&nbsp;&nbsp;<img id="arrow_d" src="img/icons/Arrow_d.svg" alt=""></img></button>
+                    <button id="lang-LT" class="lang-select lang-current flex centered text-medium" onclick="openLangSelect()"><img id="globe" src="img/icons/globe.svg" alt="">LT&nbsp;&nbsp;<img id="arrow_d" src="img/icons/Arrow_d.svg" alt=""></button>
                     <button id="lang-EN" class="hide lang-select lang-option text-medium" onclick="closeLangSelect()">EN</button>
                     <button id="lang-RU" class="hide lang-select lang-option text-medium" onclick="closeLangSelect()">RU</button>
                 </div>
             </div>
             <button class="btn small bordered light text-medium">
                 <span class="icon chat"></span>
-                <p>
                     Gauti pasiūlymą
-                </p>
             </button>
         </div>
     </div>
@@ -60,7 +58,7 @@
     <div id="landing-about">
         <div class="anchor"></div>
 
-        <img id="landing-bg" src="img/bgs/Landing_x-small.jpg" alt="" srcset="img/bgs/Landing_large.jpg 1920w,img/bgs/Landing_medium.jpg 1200w,img/bgs/Landing_small.jpg 960w,img/bgs/Landing_x-small.jpg 640w,">
+        <img id="landing-bg" src="img/bgs/Landing_x-small.jpg" alt="" srcset="img/bgs/Landing_large.jpg 1920w,img/bgs/Landing_medium.jpg 1200w,img/bgs/Landing_small.jpg 960w,img/bgs/Landing_x-small.jpg 640w">
         <div id="landing-container" class="wrapped">
             <div>
                 <p class="text-title">Modulinių<br>namų statyba</p>
@@ -82,10 +80,10 @@
                     produktą</p>
             </div>
             <div id="landing-about-3">
-                <button class="btn no-bg" id="play-presentation" onclick="playVideo()">
+                <button class="btn no-bg text-medium" id="play-presentation" onclick="playVideo()">
                     <video id="video-presentation"></video>
-                    <div id="icon-play"></div>
-                    <p class="text-medium">Žiūrėti video pristatymą</p>
+                    <span id="icon-play"></span>
+                    <span style="color: white;margin-top:10%">Žiūrėti video pristatymą</span>
                 </button>
             </div>
         </div>
@@ -102,7 +100,7 @@
             <div class="grid horizontal-2">
                 <div class="wide showcase shadow" onclick="showContent(this)">
                     <div class="showcase-container">
-                        <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/PB_fallback.jpg" alt="" srcset="img/projects/PB.jpg 1920w, img/projects/PB_small.jpg 1200w, img/projects/PB_fallback.jpg 800w"></img>
+                        <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/PB_fallback.jpg" alt="" srcset="img/projects/PB.jpg 1920w, img/projects/PB_small.jpg 1200w, img/projects/PB_fallback.jpg 800w">
                         <div class="showcase-text">
                         <div class="showcase-tag text-small">nuo 400 Eur/m&sup2;</div>
                         <div class="grid showcase-footer">
@@ -127,7 +125,7 @@
                 </div>
                 <div class="wide showcase shadow" onclick="showContent(this)">
                     <div class="showcase-container">
-                        <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/MaxiFlex_fallback.jpg" alt="" srcset="img/projects/MaxiFlex.jpg 1920w, img/projects/MaxiFlex_small.jpg 1200w, img/projects/MaxiFlex_fallback.jpg 800w"></img>
+                        <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/MaxiFlex_fallback.jpg" alt="" srcset="img/projects/MaxiFlex.jpg 1920w, img/projects/MaxiFlex_small.jpg 1200w, img/projects/MaxiFlex_fallback.jpg 800w">
                         <div class="showcase-text">
                             <div class="showcase-tag text-small">nuo 650 Eur/m&sup2;</div>
                             <div class="grid showcase-footer">
@@ -140,7 +138,7 @@
                                 </div>
                                 <div class="m2">
                                     <div class="flex showcase-dimensions">
-                                        <p class="text-large">31,68<p class="text-small">m&sup2;</p></p>
+                                        <p class="text-large">31,68<p class="text-small">m&sup2;
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +149,7 @@
             <div id="modular-triple" class="grid horizontal-3">
                 <div class="showcase shadow" onclick="showContent(this)">
                     <div class="showcase-container">
-                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/Multi_fallback.jpg" alt="" srcset="img/projects/Multi.jpg 1920w, img/projects/Multi_small.jpg 1200w,  img/projects/Multi_fallback.jpg 800w"></img>
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/Multi_fallback.jpg" alt="" srcset="img/projects/Multi.jpg 1920w, img/projects/Multi_small.jpg 1200w,  img/projects/Multi_fallback.jpg 800w">
                         <div class="showcase-text">
                             <div class="showcase-tag text-small">nuo 650 Eur/m&sup2;</div>
                             <div class="grid showcase-footer">
@@ -165,7 +163,7 @@
                                 <div class="m2">
                                     <div class="flex showcase-dimensions">
                                         <p class="text-large">43,2
-                                            <p class="text-small">m&sup2;</p>
+                                            <p class="text-small">m&sup2;
                                         </p>
                                     </div>
                                 </div>
@@ -175,7 +173,7 @@
                 </div>
                 <div class="showcase shadow" onclick="showContent(this)">
                     <div class="showcase-container">
-                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/KM15_fallback.jpg" alt="" srcset="img/projects/KM15.jpg 1920w, img/projects/KM15_small.jpg 1200w, img/projects/KM15_fallback.jpg 800w"></img>
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/KM15_fallback.jpg" alt="" srcset="img/projects/KM15.jpg 1920w, img/projects/KM15_small.jpg 1200w, img/projects/KM15_fallback.jpg 800w">
                         <div class="showcase-text">
                             <div class="showcase-tag text-small">nuo 900 Eur/m&sup2;</div>
                             <div class="grid showcase-footer">
@@ -189,7 +187,7 @@
                                 <div class="m2">
                                     <div class="flex showcase-dimensions">
                                         <p class="text-large">54,3
-                                            <p class="text-small">m&sup2;</p>
+                                            <p class="text-small">m&sup2;
                                         </p>
                                     </div>
                                 </div>
@@ -199,7 +197,7 @@
                 </div>
                 <div class="showcase shadow" onclick="showContent(this)">
                     <div class="showcase-container">
-                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/BlueLine_fallback.jpg" alt="" srcset="img/projects/BlueLine.jpg 1920w, img/projects/BlueLine_small.jpg 1200w, img/projects/BlueLine_fallback.jpg 800w"></img>
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/BlueLine_fallback.jpg" alt="" srcset="img/projects/BlueLine.jpg 1920w, img/projects/BlueLine_small.jpg 1200w, img/projects/BlueLine_fallback.jpg 800w">
                         <div class="showcase-text">
                             <div class="showcase-tag text-small">nuo 900 Eur/m&sup2;</div>
                             <div class="grid showcase-footer">
@@ -213,7 +211,7 @@
                                 <div class="m2">
                                     <div class="flex showcase-dimensions">
                                         <p class="text-large">2,62
-                                            <p class="text-small">m&sup2;</p>
+                                            <p class="text-small">m&sup2;
                                         </p>
                                     </div>
                                 </div>
@@ -240,7 +238,7 @@
                 <div class="flex">
                     <button class="btn large blue text-medium">
                         <span class="icon chat"></span>
-                        <p>Gauti pasiūlymą</p>
+                        <span>Gauti pasiūlymą</span>
                     </button>
                     <button class="btn small light special no-bg text-medium">
                         <span class="icon camera"></span>
