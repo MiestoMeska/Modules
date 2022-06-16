@@ -113,7 +113,7 @@ ul {
   float: right; }
   #nav-links-container .nav-link {
     border-top: 2px transparent solid;
-    transition: border-color 0.5s;
+    transition: border-color 0.4s;
     line-height: 98px;
     display: inline-block;
     white-space: nowrap; }
@@ -768,7 +768,7 @@ ul {
       display: block;
       opacity: 1;
       top: 75px;
-      transition: opacity ease-in 0.5s; }
+      transition: opacity ease-in 0.4s; }
       #nav-links-container.visible.wrapped {
         padding: 0; }
     #nav-links-container .nav-item {
