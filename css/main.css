@@ -335,6 +335,8 @@ ul {
   padding-bottom: 30px; }
 
 #galery-completed {
+  width: 100%;
+  min-height: 25vw;
   display: flex;
   column-count: auto;
   flex-wrap: wrap;
