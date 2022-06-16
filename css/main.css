@@ -902,4 +902,25 @@ ul {
   #cwr {
     margin: 0 20px; }
   .cert {
-    display: inline-block; } }
+    display: inline-block; }
+  #galery-button {
+    margin-top: 10px; }
+  .galery-showcase-container {
+    width: 100%; }
+  #links-area {
+    padding: 10px; }
+  #baltic-modules {
+    display: block;
+    height: 130px;
+    padding: 0;
+    text-align: center; }
+  .contacts {
+    padding: 0; }
+  #cert2 {
+    margin: 10px auto; }
+  .cert, #quality-certs-title {
+    display: block;
+    margin: 10px auto;
+    text-align: center; }
+  #projects-showing {
+    width: 100px; } }
