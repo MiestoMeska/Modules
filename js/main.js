@@ -1,7 +1,9 @@
 const overlayContainer = document.getElementById('overlay-container');
+const overlay = document.getElementById('overlay');
+const closeBtn = document.getElementById('close-overlay');
 const langBlock = document.getElementById('lang-dropdown');
-const langOption_1 = document.getElementsByClassName('lang-option')[0];
-const langOption_2 = document.getElementsByClassName('lang-option')[1];
+const langOption_1 = document.getElementById('lang-EN');
+const langOption_2 = document.getElementById('lang-RU');
 let projectsArr = []
 let filteredArr = []
 
@@ -53,32 +55,29 @@ function drawGalery() {
     let i = 0;
     let j = 0;
     let galery = document.getElementById('galery-completed');
-    let info = document.getElementById('projects-showing')
-    let template = document.createElement('div')
-
-
-
+    let info = document.getElementById('projects-showing');
+    let template = document.createElement('div');
 
     let galeryContent = "";
     if (filteredArr.length < 8) {
         i = 8 - filteredArr.length
     }
     while (i < 8) {
-        galeryContent = galeryContent += "<div class='showcase shadow' onclick='showContent(this)' style='padding:5%'><div class='showcase-container'><img class='showcase-image' style='position:absolute; height: 100%' src='img/projects/Project" + filteredArr[j].id + "_small.jpg' srcset='img/projects/Project" + filteredArr[j].id + ".jpg 1920w ,img/projects/Project" + filteredArr[j].id + "_small.jpg 900w' ><div style='position:absolute;background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%); width:100%; height:100%; opacity:0.4; position:absolute '></div><div class='showcase-tag text-small'>" + filteredArr[j].buildingType + "</div><div style='position: absolute; bottom: 0; padding:5%'><div class='text-small' style='color:white; font-size: 1rem'>" + filteredArr[j].date + "</div><div class='text-medium' style='color:white; font-size: 1.5rem'>" + filteredArr[j].name + "</div></div></div></div></div>";
+        galeryContent = galeryContent += "<div class='galery-showcase-container'><div class='galery-showcase shadow' onclick='showContent(this)'><div class='galery-showcase-item'><div class='galery-image-container'><img class='showcase-image' src='img/projects/Project" + filteredArr[j].id + "_small.jpg' srcset='img/projects/Project" + filteredArr[j].id + ".jpg 1920w ,img/projects/Project" + filteredArr[j].id + "_small.jpg 900w' ><div class='galery-showcase-gradient'></div></div><div class='showcase-tag h5'>" + filteredArr[j].buildingType + "</div><div class='galery-showcase-text'><div class='h5 galery-date-info'>" + filteredArr[j].date + "</div><div class='h3'>" + filteredArr[j].name + "</div></div></div></div></div></div>";
         i++;
         j++;
     }
     info.innerHTML = "Rodomi " + j + " iš " + filteredArr.length + " projektų"
     galery.innerHTML = galeryContent;
 }
-function openLangSelect() {
-    langBlock.classList.add('shadow');
-    langOption_1.classList.remove('hide');
-    langOption_2.classList.remove('hide');
+function langSelectToggle() {
+    langBlock.classList.toggle('shadow');
+    langOption_1.classList.toggle('hide');
+    langOption_2.classList.toggle('hide');
 }
 
-function closeLangSelect() {
-    langBlock.classList.remove('shadow')
+function langSelectClose() {
+    langBlock.classList.remove('shadow');
     langOption_1.classList.add('hide');
     langOption_2.classList.add('hide');
 }
@@ -86,7 +85,6 @@ function closeLangSelect() {
 function playVideo() {
     openOverlay()
     const video = document.createElement('img');
-    const closeBtn = document.getElementById('close-overlay');
     const cloneBtn = closeBtn.cloneNode(true);
     video.setAttribute("src", 'https://raw.githubusercontent.com/MiestoMeska/Modules/main/video/Presentation.gif');
     video.classList.add('gif','presentation');
@@ -100,7 +98,6 @@ function playVideo() {
 
 function showContent(el) {
     const clone = el.cloneNode(true);
-    const closeBtn = document.getElementById('close-overlay');
     const cloneBtn = closeBtn.cloneNode(true);
     openOverlay();
     var size = String(el.classList.item(0))
@@ -109,7 +106,8 @@ function showContent(el) {
     } else {
         overlayContainer.style.width = '50rem';
     }
-    clone.classList.remove('duo', 'trio', 'shadow');
+    clone.classList.remove('shadow');
+    clone.style.zIndex = '100';
     clone.style.height= '35rem';
     clone.style.padding= '5%'
     clone.style.backgroundColor= 'white';
@@ -120,14 +118,30 @@ function showContent(el) {
 }
 
 function openOverlay() {
-    const overlay = document.getElementById('overlay');
-    overlay.addEventListener(onclick,closeOverlay)
     overlay.classList.add('show');
+    overlayContainer.addEventListener("mouseup",closeOverlayOnClick)
 }
 
 function closeOverlay() {
-    const overlay = document.getElementById('overlay');
     overlayContainer.innerHTML = '';
     overlay.classList.remove('show');
+}
+
+function closeOverlayOnClick() {
+    console.log('clicked')
+    if (EventTarget.id !="overlayContainer") {
+    overlay.classList.remove('show');
+    overlayContainer.innerHTML = '';
+    }
+}
+
+function mobileMenuToggle() {
+document.getElementById("mobile-menu").classList.toggle("change");
+document.getElementById("nav-links-container").classList.toggle("visible");
+}
+
+function mobileMenuClose() {
+document.getElementById("mobile-menu").classList.remove("change");
+document.getElementById("nav-links-container").classList.remove("visible");
 }
 
