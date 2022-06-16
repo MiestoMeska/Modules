@@ -14,145 +14,168 @@
 
     <!-- OVERLAY -->
     <!-- Close Button -->
-<!-- <button class=" btn blue no-bg text-large" id="close-overlay" onclick="closeOverlay()">X</button>
+    <!-- <button class=" btn blue no-bg text-large" id="close-overlay" onclick="closeOverlay()">X</button>
     <div id="overlay" class="overlay centered">
         <div id="overlay-container" class="centered">
         </div>
     </div> -->
     <!-- NAV BAR -->
-    
-<div id="page" class="site">
-    <div id="nav-bar">
-        <div id="nav-container">
-            <div id="nav-logo-container">
-                <img id="nav-logo" style="aspect-ratio: 4/1;" src="img/logos/BM_logo_full.svg" alt="UAB Baltic Modules">
-            </div>
-            <div id="mobile-menu" onclick="mobileMenuToggle()">
-                <div id="bar-1"></div>
-                <div id="bar-2"></div>
-                <div id="bar-3"></div>
-            </div>
-            <div id="nav-links-container">
-                <div id="nav-menu" class="nav-menu h4 nav-item">
-                    <ul>
-                        <li class="nav-link-container">
-                            <a class="nav-link" href="#projects-completed" onclick="mobileMenuClose()">Gaminiai</a>
-                        </li>
-                        <li class="nav-link-container">
-                            <a class="nav-link" href="#about" onclick="mobileMenuClose()">Apie mus</a>
-                        </li>
-                        <li class="nav-link-container">
-                            <a class="nav-link" href="#special-projects" onclick="mobileMenuClose()">Gamyba</a>
-                        </li>
-                        <li class="nav-link-container">
-                            <a class="nav-link" href="#modular-rent" onclick="mobileMenuClose()">Nuoma</a>
-                        </li>
-                        <li  class="nav-link-container">
-                            <a class="nav-link" href="#footer" onclick="mobileMenuClose()">Kontaktai</a>
-                        </li>
-                    </ul>
+
+    <div id="page" class="site">
+        <div id="nav-bar">
+            <div id="nav-container">
+                <div id="nav-logo-container">
+                    <img id="nav-logo" style="aspect-ratio: 4/1;" src="img/logos/BM_logo_full.svg"
+                        alt="UAB Baltic Modules">
                 </div>
-                <div class="lang-container nav-item">
-                    <div id="lang-dropdown" class="lang-dropdown h4" onmouseleave="langSelectClose()">
-                        <div id="lang-LT" class="lang-select lang-current flex centered" onclick="langSelectToggle()">
-                            <img id="globe" src="img/icons/Globe.svg" alt="">LT&nbsp;&nbsp;
-                            <img id="arrow_d" src="img/icons/Arrow_d.svg" alt="">
-                        </div>
-                        <div id="lang-EN" class="hide lang-select"
-                            onclick="langSelectToggle(), mobileMenuClose()">
-                            <div class="lang-option">EN</div>
+                <div id="mobile-menu" onclick="mobileMenuToggle()">
+                    <div id="bar-1"></div>
+                    <div id="bar-2"></div>
+                    <div id="bar-3"></div>
+                </div>
+                <div id="nav-links-container">
+                    <div id="nav-menu" class="nav-menu h4 nav-item">
+                        <ul>
+                            <li class="nav-link-container">
+                                <a class="nav-link" href="#projects-completed" onclick="mobileMenuClose()">Gaminiai</a>
+                            </li>
+                            <li class="nav-link-container">
+                                <a class="nav-link" href="#about" onclick="mobileMenuClose()">Apie mus</a>
+                            </li>
+                            <li class="nav-link-container">
+                                <a class="nav-link" href="#special-projects" onclick="mobileMenuClose()">Gamyba</a>
+                            </li>
+                            <li class="nav-link-container">
+                                <a class="nav-link" href="#modular-rent" onclick="mobileMenuClose()">Nuoma</a>
+                            </li>
+                            <li class="nav-link-container">
+                                <a class="nav-link" href="#footer" onclick="mobileMenuClose()">Kontaktai</a>
+                            </li>
+                        </ul>
                     </div>
-                        <div id="lang-RU" class="hide lang-select"
-                            onclick="langSelectToggle(), mobileMenuClose()">
-                            <div class="lang-option"> RU</div>
-                        </div>
-                    </div>
-                </div>
-                <button id="nav-button" class="btn medium bordered light nav-item">
-                    <span class="icon chat"></span>
-                    <span class="p h4">Gauti pasiūlymą</span>
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- LANDING -->
-    <div id="landing-about">
-        <div id="landing-image-container">
-            <img id="landing-bg" src="img/bgs/Landing_x-small.jpg" alt=""
-                srcset="img/bgs/Landing_large.jpg 1920w,img/bgs/Landing_medium.jpg 1200w,img/bgs/Landing_small.jpg 960w,img/bgs/Landing_x-small.jpg 640w"
-                sizes="(max-width: 1800px) 1920px, (max-width: 1100px) 1200px,(max-width: 860px) 960px, 100vw">
-        </div>
-        <div class="wrapped">
-            <div id="landing-content">
-                <div id="landing-title" class="landing-item">
-                    <p class="h1">Modulinių namų statyba</p>
-                    <p class="h4">nuo 2006 m.</p>
-                </div>
-                <div class="landing-item landing-text">
-                    <img class="icon-large" src="img/icons/Key.svg" alt="">
-                    <p class="text18">Greitas apčiuopiamo vaizdo rezultatas, bet kuriuo metų laiku – tiesiai iš mūsų
-                        gamyklos</p>
-                </div>
-                <div class="landing-item landing-text">
-                    <img class="icon-large" src="img/icons/Client.svg" alt="">
-                    <p class="text18">Kiekvienam klientui sąmatos sudaromos individualiai, pagal jo norus ir
-                        pageidavimus</p>
-                </div>
-                <div class="landing-item landing-text">
-                    <img class="icon-large" src="img/icons/Target.svg" alt="">
-                    <p class="text18">Įgyjome pakankamai patirties, kad galėtume pasiūlyti aukštą kokybę atitinkantį
-                        produktą</p>
-                </div>
-                <div class="landing-item" id="landing-video">
-                    <div class="h4" id="play-presentation">
-                        <video id="video-presentation"></video>
-                        <span id="icon-play"></span>
-                        <div id="play-video-text" class="h4">Žiūrėti video pristatymą</div>
-                    </div>
-                </div>
-            </div>    
-        </div>
-    </div>
-    
-    <!-- MODULAR PRODUCTS -->
-    
-    <div id="modular-products" class="section">
-        <div class="wrapped">
-            <p class="h1 section-title">Moduliniai gaminiai</p>
-            <div class="galery">
-                <div class="showcase-container showcase-wide shadow">
-                    <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/PB_fallback.jpg" alt=""
-                        srcset="img/projects/PB.jpg 1920w, img/projects/PB_small.jpg 1200w, img/projects/PB_fallback.jpg 800w"
-                        sizes="(max-width: 1600px) 1920px, (max-width: 1100px) 1200px, 100vw">
-                    <div class="showcase-info">
-                        <div class="showcase-tag h4">nuo 400 Eur/m&sup2;</div>
-                        <div class="showcase-text-container">
-                            <div class="showcase-text">
-                                <p class="h3 showcase-name">PB</p>
-                                <p class="text18 showcase-about">
-                                    Standartinių modulių pavyzdžiai, lengvai jungiami
-                                    vienas su kitu, puikiai tinka biurams, prekyvietėm.
-                                </p>
+                    <div class="lang-container nav-item">
+                        <div id="lang-dropdown" class="lang-dropdown h4" onmouseleave="langSelectClose()">
+                            <div id="lang-LT" class="lang-select lang-current flex centered"
+                                onclick="langSelectToggle()">
+                                <img id="globe" src="img/icons/Globe.svg" alt="">LT&nbsp;&nbsp;
+                                <img id="arrow_d" src="img/icons/Arrow_d.svg" alt="">
                             </div>
-                            <div class="m2">
-                                <p class="h5">nuo</p>
-                                <div class="showcase-dimensions">
-                                    <p class="h3">28,8<span class="text18">m&sup2;</span>
+                            <div id="lang-EN" class="hide lang-select" onclick="langSelectToggle(), mobileMenuClose()">
+                                <div class="lang-option">EN</div>
+                            </div>
+                            <div id="lang-RU" class="hide lang-select" onclick="langSelectToggle(), mobileMenuClose()">
+                                <div class="lang-option"> RU</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="nav-button" class="btn medium bordered light nav-item">
+                        <span class="icon chat"></span>
+                        <span class="p h4">Gauti pasiūlymą</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LANDING -->
+        <div id="landing-about">
+            <div id="landing-image-container">
+                <img id="landing-bg" src="img/bgs/Landing_x-small.jpg" alt=""
+                    srcset="img/bgs/Landing_large.jpg 1920w,img/bgs/Landing_medium.jpg 1200w,img/bgs/Landing_small.jpg 960w,img/bgs/Landing_x-small.jpg 640w"
+                    sizes="(max-width: 1800px) 1920px, (max-width: 1100px) 1200px,(max-width: 860px) 960px, 100vw">
+            </div>
+            <div class="wrapped">
+                <div id="landing-content">
+                    <div id="landing-title" class="landing-item">
+                        <p class="h1">Modulinių namų statyba</p>
+                        <p class="h4">nuo 2006 m.</p>
+                    </div>
+                    <div class="landing-item landing-text">
+                        <img class="icon-large" src="img/icons/Key.svg" alt="">
+                        <p class="text18">Greitas apčiuopiamo vaizdo rezultatas, bet kuriuo metų laiku – tiesiai iš mūsų
+                            gamyklos</p>
+                    </div>
+                    <div class="landing-item landing-text">
+                        <img class="icon-large" src="img/icons/Client.svg" alt="">
+                        <p class="text18">Kiekvienam klientui sąmatos sudaromos individualiai, pagal jo norus ir
+                            pageidavimus</p>
+                    </div>
+                    <div class="landing-item landing-text">
+                        <img class="icon-large" src="img/icons/Target.svg" alt="">
+                        <p class="text18">Įgyjome pakankamai patirties, kad galėtume pasiūlyti aukštą kokybę atitinkantį
+                            produktą</p>
+                    </div>
+                    <div class="landing-item" id="landing-video">
+                        <div class="h4" id="play-presentation">
+                            <video id="video-presentation"></video>
+                            <span id="icon-play"></span>
+                            <div id="play-video-text" class="h4">Žiūrėti video pristatymą</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODULAR PRODUCTS -->
+
+        <div id="modular-products" class="section">
+            <div class="wrapped">
+                <p class="h1 section-title">Moduliniai gaminiai</p>
+                <div class="galery">
+                    <div class="showcase-container showcase-wide shadow">
+                        <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/PB_fallback.jpg" alt=""
+                            srcset="img/projects/PB.jpg 1920w, img/projects/PB_small.jpg 1200w, img/projects/PB_fallback.jpg 800w"
+                            sizes="(max-width: 1600px) 1920px, (max-width: 1100px) 1200px, 100vw">
+                        <div class="showcase-info">
+                            <div class="showcase-tag h4">nuo 400 Eur/m&sup2;</div>
+                            <div class="showcase-text-container">
+                                <div class="showcase-text">
+                                    <p class="h3 showcase-name">PB</p>
+                                    <p class="text18 showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <p class="h5">nuo</p>
+                                    <div class="showcase-dimensions">
+                                        <p class="h3">28,8<span class="text18">m&sup2;</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="showcase-container showcase-wide shadow">
-                    <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/MaxiFlex_fallback.jpg" alt=""
-                        srcset="img/projects/MaxiFlex.jpg 1920w, img/projects/MaxiFlex_small.jpg 1200w, img/projects/MaxiFlex_fallback.jpg 800w"
-                        sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-                    <div class="showcase-info">
+                    <div class="showcase-container showcase-wide shadow">
+                        <img class="showcase-image" style="aspect-ratio:2/1" src="img/projects/MaxiFlex_fallback.jpg"
+                            alt=""
+                            srcset="img/projects/MaxiFlex.jpg 1920w, img/projects/MaxiFlex_small.jpg 1200w, img/projects/MaxiFlex_fallback.jpg 800w"
+                            sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
+                        <div class="showcase-info">
+                            <div class="showcase-tag h4">nuo 650 Eur/m&sup2;</div>
+                            <div class="showcase-text-container">
+                                <div class="showcase-text">
+                                    <p class="h3 showcase-name">Maxi Flex</p>
+                                    <p class="text18 showcase-about">
+                                        Standartinių modulių pavyzdžiai, lengvai jungiami
+                                        vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                    </p>
+                                </div>
+                                <div class="m2">
+                                    <div class="showcase-dimensions">
+                                        <p class="h3">31,68<span class="text18">m&sup2;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-container showcase-medium shadow">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/Multi_fallback.jpg"
+                            alt=""
+                            srcset="img/projects/Multi.jpg 1920w, img/projects/Multi_small.jpg 1200w, img/projects/Multi_fallback.jpg 800w"
+                            sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
                         <div class="showcase-tag h4">nuo 650 Eur/m&sup2;</div>
                         <div class="showcase-text-container">
                             <div class="showcase-text">
-                                <p class="h3 showcase-name">Maxi Flex</p>
+                                <p class="h3 showcase-name">Multi</p>
                                 <p class="text18 showcase-about">
                                     Standartinių modulių pavyzdžiai, lengvai jungiami
                                     vienas su kitu, puikiai tinka biurams, prekyvietėm.
@@ -160,70 +183,346 @@
                             </div>
                             <div class="m2">
                                 <div class="showcase-dimensions">
-                                    <p class="h3">31,68<span class="text18">m&sup2;</span>
+                                    <p class="h3">43,2<span class="text18">m&sup2;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-container showcase-medium shadow">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/KM15_fallback.jpg"
+                            alt=""
+                            srcset="img/projects/KM15.jpg 1920w, img/projects/KM15_small.jpg 1200w, img/projects/KM15_fallback.jpg 800w"
+                            sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
+                        <div class="showcase-tag h4">nuo 900 Eur/m&sup2;</div>
+                        <div class="showcase-text-container">
+                            <div class="showcase-text">
+                                <p class="h3 showcase-name">KM 15</p>
+                                <p class="text18 showcase-about">
+                                    Standartinių modulių pavyzdžiai, lengvai jungiami
+                                    vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                </p>
+                            </div>
+                            <div class="m2">
+                                <div class="showcase-dimensions">
+                                    <p class="h3">43,2<span class="text18">m&sup2;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-container showcase-medium shadow">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/BlueLine_fallback.jpg"
+                            alt=""
+                            srcset="img/projects/BlueLine.jpg 1920w, img/projects/BlueLine_small.jpg 1200w, img/projects/BlueLine_fallback.jpg 800w"
+                            sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
+                        <div class="showcase-tag h4">nuo 900 Eur/m&sup2;</div>
+                        <div class="showcase-text-container">
+                            <div class="showcase-text">
+                                <p class="h3 showcase-name">Blue Line</p>
+                                <p class="text18 showcase-about">
+                                    Standartinių modulių pavyzdžiai, lengvai jungiami
+                                    vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                </p>
+                            </div>
+                            <div class="m2">
+                                <div class="showcase-dimensions">
+                                    <p class="h3">2,62<span class="text18">m&sup2;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-end"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPECIAL PROJECTS -->
+        <div id="special-projects" class="section">
+            <div class="background">
+                <div class="wrapped">
+                    <div class="bg-text-container">
+                        <p class="h1 section-title">Individualūs projektai</p>
+                        <p class="text18 about">Jei neradote patinkančio namo projekto ar norite kažko savito ir
+                            individualaus, o gal turite nestandartinių formų sklypą ? Tuomet užpildykite techninės
+                            užduoties
+                            anketą ir mes paruošime pagal Jūsų norus ir turimą sklypą atitinkantį projektą. Patikėkite
+                            mums savo
+                            norus kuriant Jūsų svajonių namus. Pateikiame tik keletą iš mūsų individualiai sukurtų namų
+                            projekų.
+                        </p>
+                        <div class="buttons-container">
+                            <button class="btn large blue h4">
+                                <span class="icon chat"></span>
+                                <span class="p">Gauti pasiūlymą</span>
+                            </button>
+                            <button id="galery-button" class="btn text light special no-bg h4">
+                                <span class="icon camera"></span>
+                                <span class="p">Žiūrėti galeriją</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-img-container">
+                        <img id="special-img" src="img/projects/SpecialProjects_small.png"
+                            srcset="img/projects/SpecialProjects.png 1920w, img/projects/SpecialProjects_medium.png 1200w, img/projects/SpecialProjects_small.png 640w"
+                            alt="" sizes="(max-width: 860px) 640px, (max-width: 1100px) 1200px, 100vw">
+                    </div>
+                    <div class="section-end"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECTS COMPLETED -->
+        <div id="projects-completed" class="section">
+            <div class="wrapped">
+                <div class="galery-header">
+                    <p class="h1 text-title">Įgyvendinti projektai</p>
+                    <div id="filters-completed">
+                        <p class="h4 filter">Rodomi:&nbsp;</p>
+                        <div class="checkbox-container filter">
+                            <input class="input" type="checkbox" id="modularFilter" name="Mod" checked
+                                onchange="filterGaleryData()">
+                            <label for="modularFilter" class="text18 label">Moduliniai projektai</label>
+                        </div>
+                        <div class="checkbox-container filter">
+                            <input class="input" type="checkbox" id="specialFilter" name="Spec" checked
+                                onchange="filterGaleryData()">
+                            <label for="specialFilter" class="text18 label">Individualūs projektai</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="galery-completed">
+
+                    <div class="section-end"></div>
+                </div>
+                <div id="projects-completed-footer" class="galery-menu">
+                    <button class="btn light medium bordered h4">
+                        <span class="p">Visi projektai</span>
+                        <span class="icon arrow"></span>
+                    </button>
+                    <p id="projects-showing" class="h4">Rodomi 8 iš 48 projektų</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODULAR RENT -->
+        <div id="modular-rent" class="section">
+            <div class="background">
+                <div class="bg-img-container">
+                    <img id="rent-img" src="img/projects/ModularRent_fallback.png"
+                        srcset="img/projects/ModularRent.png 1920w, img/projects/ModularRent_medium.png 1200w, img/projects/ModularRent_small.png 800w, img/projects/ModularRent_fallback.png 480w"
+                        alt=""
+                        sizes="(max-width:480px) 480px, (max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
+                </div>
+                <div class="wrapped">
+                    <div class="bg-text-container">
+                        <p class="h1 section-title">Modulinių patalpų nuoma</p>
+                        <p class="text18 about">Modulinėse patalpose iš anksto, pagal kliento pageidavimus numatyta visa
+                            komforto įranga, visos reikalingos komunikacijos – vandentiekis, šildymas, elektra,
+                            rekuperacinė
+                            vėdinimo sistema. Labai dažnai verslininkai bando savo konkretiems tikslams pritaikyti senas
+                            patalpas,
+                            bet jas įrengti pagal poreikius dažnai kainuoja brangiau nei statyti naujas. Dėl to ir buvo
+                            sumanytas
+                            toks aprūpinimo patalpomis modelis.</p>
+                        <div class="buttons-container">
+                            <button class="btn large blue padded h4">
+                                <span class="icon chat"></span>
+                                <span class="p">Rinktis modulį</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="section-end"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORAGE OFFER -->
+        <div id="storage-offer" class="section">
+            <div class="wrapped">
+                <p class="h1 section-title">Turime sandelyje</p>
+                <div id="storage-triple" class="galery">
+                    <div class="showcase-container showcase-medium shadow">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/Multi_fallback.jpg"
+                            alt=""
+                            srcset="img/projects/Multi.jpg 1920w, img/projects/Multi_small.jpg 1200w, img/projects/Multi_fallback.jpg 800w"
+                            sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
+                        <div class="showcase-tag h4">nuo 650 Eur/m&sup2;</div>
+                        <div class="showcase-text-container">
+                            <div class="showcase-text">
+                                <p class="h3 showcase-name">Multi</p>
+                                <p class="text18 showcase-about">
+                                    Standartinių modulių pavyzdžiai, lengvai jungiami
+                                    vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                </p>
+                            </div>
+                            <div class="m2">
+                                <div class="showcase-dimensions">
+                                    <p class="h3">43,2<span class="text18">m&sup2;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-container showcase-medium shadow">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/KM15_fallback.jpg"
+                            alt=""
+                            srcset="img/projects/KM15.jpg 1920w, img/projects/KM15_small.jpg 1200w, img/projects/KM15_fallback.jpg 800w"
+                            sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
+                        <div class="showcase-tag h4">nuo 900 Eur/m&sup2;</div>
+                        <div class="showcase-text-container">
+                            <div class="showcase-text">
+                                <p class="h3 showcase-name">KM 15</p>
+                                <p class="text18 showcase-about">
+                                    Standartinių modulių pavyzdžiai, lengvai jungiami
+                                    vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                </p>
+                            </div>
+                            <div class="m2">
+                                <div class="showcase-dimensions">
+                                    <p class="h3">43,2<span class="text18">m&sup2;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-container showcase-medium shadow">
+                        <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/BlueLine_fallback.jpg"
+                            alt=""
+                            srcset="img/projects/BlueLine.jpg 1920w, img/projects/BlueLine_small.jpg 1200w, img/projects/BlueLine_fallback.jpg 800w"
+                            sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
+                        <div class="showcase-tag h4">nuo 900 Eur/m&sup2;</div>
+                        <div class="showcase-text-container">
+                            <div class="showcase-text">
+                                <p class="h3 showcase-name">Blue Line</p>
+                                <p class="text18 showcase-about">
+                                    Standartinių modulių pavyzdžiai, lengvai jungiami
+                                    vienas su kitu, puikiai tinka biurams, prekyvietėm.
+                                </p>
+                            </div>
+                            <div class="m2">
+                                <div class="showcase-dimensions">
+                                    <p class="h3">2,62<span class="text18">m&sup2;</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="showcase-container showcase-medium shadow">
-                    <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/Multi_fallback.jpg" alt=""
-                        srcset="img/projects/Multi.jpg 1920w, img/projects/Multi_small.jpg 1200w, img/projects/Multi_fallback.jpg 800w"
-                        sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-                    <div class="showcase-tag h4">nuo 650 Eur/m&sup2;</div>
-                    <div class="showcase-text-container">
-                        <div class="showcase-text">
-                            <p class="h3 showcase-name">Multi</p>
-                            <p class="text18 showcase-about">
-                                Standartinių modulių pavyzdžiai, lengvai jungiami
-                                vienas su kitu, puikiai tinka biurams, prekyvietėm.
-                            </p>
+                <div class="storage-offer-button">
+                    <button class="btn light medium bordered h4">
+                        <span class="p">
+                            Visi moduliai
+                        </span>
+                        <span class="icon arrow"></span>
+                    </button>
+                </div>
+                <div class="section-end"></div>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+
+        <div id="about">
+            <div class="wrapped">
+                <div id="about-content">
+                    <div id="text-about" class="text-container">
+                        <p class="h2">Apie mus</p>
+                        <p class="text18 about">UAB „Baltic Modules“ – tai dukterinė Danijos kompanijos įmonė, Lietuvoje
+                            gyvuojanti jau 10 metų. Per šiuos metus
+                            sugebėjome įgyti pakankamai patirties, kad galėtumėme pasiūlyti aukštą kokybę atitinkantį
+                            produktą.
+                            Mūsų
+                            įmonėje nuolat
+                            dirba apie 30 žmonių, kurie yra kvalifikuoti savo sričių specialistai. Mes padėsime Jums
+                            realizuoti
+                            savo
+                            idėjas,
+                            pasidalinsime savo žiniomis ir sukaupta patirtimi norėdami padėti rasti Jums optimaliausią,
+                            Jūsų
+                            norus
+                            atitinkantį
+                            variantą</p>
+                        <button class="btn light text special no-bg h4">
+                            <span class="t">
+                                Plačiau apie mus
+                            </span>
+                            <span class="icon arrow"></span>
+                        </button>
+                    </div>
+                    <div id="manufacture" class="text-container">
+                        <p class="h2">Gamyba</p>
+                        <p class="text18 about">Vakarų Europa jau senai žengia koja kojon su technologijomis, mada,
+                            neapsunkina savo gyvenimo ilgais pasiruošimo ir
+                            statybos procesais norint pasirūpinti nuosavu gyvenamuoju namu, administracinėmis ar
+                            komercinėmis
+                            patalpomis – jie
+                            renkasi modulius.</p>
+                        <button class="btn light text special no-bg h4">
+                            <span class="t">
+                                Plačiau apie gamybą
+                            </span>
+                            <span class="icon arrow"></span>
+                        </button>
+                    </div>
+                    <div class="img-container">
+                        <img id="guy-img" style="aspect-ratio:1/1.5 ;" src="img/projects/Guy_fallback.jpg" alt=""
+                            srcset="img/projects/Guy.jpg 1920w, img/projects/Guy_small.jpg 1200w,  img/projects/Guy_fallback.jpg 800w"
+                            sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
+                    </div>
+                    <div class="section-end"></div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+
+        <div id="footer">
+            <div id="footer-bg-container">
+                <div class="footer-bg"></div>
+                <div class="wrapped">
+                    <div id="contact-area">
+                        <div class="contact-container">
+                            <div class="contact-items">
+                                <input class="btn h4" type="text" name="Contact" id="footer-contact-input"
+                                    placeholder="Jūsų telefonas arba el. paštas">
+                                <button class="btn long dark h4">
+                                    <span class="icon chat"></span>
+                                    <span class="p"> Gauti pasiūlymą</span>
+                                </button>
+                            </div>
+                            <div id="contact-area-bg"></div>
                         </div>
-                        <div class="m2">
-                            <div class="showcase-dimensions">
-                                <p class="h3">43,2<span class="text18">m&sup2;</span>
+                    </div>
+                    <div id="links-area">
+                        <div id="baltic-modules" class="contacts footer-item">
+                            <div class="contacts">
+                                <div class="h4 footer-link">+370 650 70474</div>
+                                <div class="text18 footer-link">info@balticmodules.lt</div>
+                            </div>
+                            <div class="footer-link waypoint">
+                                <div id="icon-waypoint" class="address"></div>
+                                <p id="address-text" class='text14 address'>Vaidaugų g. 1, Toleikių km., Dovilų sen.,
+                                    LT-95387, Klaipėdos raj.</p>
+                            </div>
+                        </div>
+                        <div id="quality-certs" class="footer-item">
+                            <p id="quality-certs-title" class="h4 link ft-text">Kokybės sertifikatai</p>
+                            <div id="certs-logos">
+                                <div class="cert" id="cert1"></div>
+                                <div class="cert" id="cert2"></div>
+                                <div class="cert" id="cert3"></div>
+                            </div>
+                        </div>
+                        <div id="extra-links" class="footer-item">
+                            <div id="fb-logo" class="socials footer-link"></div>
+                            <div id="youtube-logo" class="socials footer-link"></div>
+                            <p id="cwr" class="text14 ft-text">&copy; 2019 UAB Baltic Modules</p>
+                            <div id="creator">
+                                <p class="text14 ft-text creator" id="created-by">Sukūrė</p>
+                                <div id="creative-logo" class="footer-link creator"></div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="showcase-container showcase-medium shadow">
-                    <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/KM15_fallback.jpg" alt=""
-                        srcset="img/projects/KM15.jpg 1920w, img/projects/KM15_small.jpg 1200w, img/projects/KM15_fallback.jpg 800w"
-                        sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-                    <div class="showcase-tag h4">nuo 900 Eur/m&sup2;</div>
-                    <div class="showcase-text-container">
-                        <div class="showcase-text">
-                            <p class="h3 showcase-name">KM 15</p>
-                            <p class="text18 showcase-about">
-                                Standartinių modulių pavyzdžiai, lengvai jungiami
-                                vienas su kitu, puikiai tinka biurams, prekyvietėm.
-                            </p>
-                        </div>
-                        <div class="m2">
-                            <div class="showcase-dimensions">
-                                <p class="h3">43,2<span class="text18">m&sup2;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="showcase-container showcase-medium shadow">
-                    <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/BlueLine_fallback.jpg" alt=""
-                        srcset="img/projects/BlueLine.jpg 1920w, img/projects/BlueLine_small.jpg 1200w, img/projects/BlueLine_fallback.jpg 800w"
-                        sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-                    <div class="showcase-tag h4">nuo 900 Eur/m&sup2;</div>
-                    <div  class="showcase-text-container">
-                        <div class="showcase-text">
-                            <p class="h3 showcase-name">Blue Line</p>
-                            <p class="text18 showcase-about">
-                                Standartinių modulių pavyzdžiai, lengvai jungiami
-                                vienas su kitu, puikiai tinka biurams, prekyvietėm.
-                            </p>
-                        </div>
-                        <div class="m2">
-                            <div class="showcase-dimensions">
-                                <p class="h3">2,62<span class="text18">m&sup2;</span>
-                            </div>
-                        </div>
+                    <div id="footer-contact2">
+                        <button class="btn large blue footer h4">
+                            <span class="icon chat"></span>
+                            <span class="p">Klauskite mūsų</span>
+                        </button>
                     </div>
                 </div>
                 <div class="section-end"></div>
@@ -231,285 +530,7 @@
         </div>
     </div>
 
-    <!-- SPECIAL PROJECTS --> 
-    <div id="special-projects" class="section">
-        <div class="background">
-            <div class="wrapped">
-                <div class="bg-text-container">
-                    <p class="h1 section-title">Individualūs projektai</p>
-                    <p class="text18 about">Jei neradote patinkančio namo projekto ar norite kažko savito ir
-                        individualaus, o gal turite nestandartinių formų sklypą ? Tuomet užpildykite techninės užduoties
-                        anketą ir mes paruošime pagal Jūsų norus ir turimą sklypą atitinkantį projektą. Patikėkite mums savo
-                        norus kuriant Jūsų svajonių namus. Pateikiame tik keletą iš mūsų individualiai sukurtų namų projekų.
-                    </p>
-                    <div class="buttons-container">
-                        <button class="btn large blue h4">
-                            <span class="icon chat"></span>
-                            <span class="p">Gauti pasiūlymą</span>
-                        </button>
-                        <button id="galery-button" class="btn text light special no-bg h4">
-                            <span class="icon camera"></span>
-                            <span class="p">Žiūrėti galeriją</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="bg-img-container">
-                    <img id="special-img" src="img/projects/SpecialProjects_small.png"
-                        srcset="img/projects/SpecialProjects.png 1920w, img/projects/SpecialProjects_medium.png 1200w, img/projects/SpecialProjects_small.png 640w"
-                        alt="" sizes="(max-width: 860px) 640px, (max-width: 1100px) 1200px, 100vw">
-                </div>
-                <div class="section-end"></div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- PROJECTS COMPLETED -->
-    <div id="projects-completed" class="section">
-        <div class="wrapped">
-            <div class="galery-header">
-                <p class="h1 text-title">Įgyvendinti projektai</p>
-                <div id="filters-completed">
-                    <p class="h4 filter" >Rodomi:&nbsp;</p>
-                    <div class="checkbox-container filter">
-                        <input class="input" type="checkbox" id="modularFilter" name="Mod" checked onchange="filterGaleryData()">
-                        <label for="modularFilter" class="text18 label">Moduliniai projektai</label>
-                    </div>
-                    <div class="checkbox-container filter">
-                        <input class="input" type="checkbox" id="specialFilter" name="Spec" checked onchange="filterGaleryData()">
-                        <label for="specialFilter" class="text18 label">Individualūs projektai</label>
-                    </div>
-                </div>
-            </div>
-            <div id="galery-completed">
-    
-            <div class="section-end"></div>
-            </div>
-            <div id="projects-completed-footer" class="galery-menu">
-                <button class="btn light medium bordered h4">
-                    <span class="p">Visi projektai</span>
-                    <span class="icon arrow"></span>
-                </button>
-                <p id="projects-showing" class="h4">Rodomi 8 iš 48 projektų</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- MODULAR RENT --> 
-    <div id="modular-rent" class="section">
-        <div class="background">
-            <div class="bg-img-container">
-                <img id="rent-img" src="img/projects/ModularRent_fallback.png"
-                    srcset="img/projects/ModularRent.png 1920w, img/projects/ModularRent_medium.png 1200w, img/projects/ModularRent_small.png 800w, img/projects/ModularRent_fallback.png 480w"
-                    alt="" sizes="(max-width:480px) 480px, (max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-            </div>
-            <div class="wrapped">
-                <div class="bg-text-container">
-                    <p class="h1 section-title">Modulinių patalpų nuoma</p>
-                    <p class="text18 about">Modulinėse patalpose iš anksto, pagal kliento pageidavimus numatyta visa
-                        komforto įranga, visos reikalingos komunikacijos – vandentiekis, šildymas, elektra, rekuperacinė
-                        vėdinimo sistema. Labai dažnai verslininkai bando savo konkretiems tikslams pritaikyti senas
-                        patalpas,
-                        bet jas įrengti pagal poreikius dažnai kainuoja brangiau nei statyti naujas. Dėl to ir buvo
-                        sumanytas
-                        toks aprūpinimo patalpomis modelis.</p>
-                        <div class="buttons-container">
-                            <button class="btn large blue padded h4">
-                                <span class="icon chat"></span>
-                                <span class="p">Rinktis modulį</span>
-                            </button>
-                        </div>
-                </div>
-                <div class="section-end"></div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- STORAGE OFFER -->  
-    <div id="storage-offer" class="section">
-        <div class="wrapped">
-            <p class="h1 section-title">Turime sandelyje</p>
-            <div id="storage-triple" class="galery">
-                <div class="showcase-container showcase-medium shadow">
-                    <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/Multi_fallback.jpg" alt=""
-                        srcset="img/projects/Multi.jpg 1920w, img/projects/Multi_small.jpg 1200w, img/projects/Multi_fallback.jpg 800w"
-                        sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-                    <div class="showcase-tag h4">nuo 650 Eur/m&sup2;</div>
-                    <div class="showcase-text-container">
-                        <div class="showcase-text">
-                            <p class="h3 showcase-name">Multi</p>
-                            <p class="text18 showcase-about">
-                                Standartinių modulių pavyzdžiai, lengvai jungiami
-                                vienas su kitu, puikiai tinka biurams, prekyvietėm.
-                            </p>
-                        </div>
-                        <div class="m2">
-                            <div class="showcase-dimensions">
-                                <p class="h3">43,2<span class="text18">m&sup2;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="showcase-container showcase-medium shadow">
-                    <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/KM15_fallback.jpg" alt=""
-                        srcset="img/projects/KM15.jpg 1920w, img/projects/KM15_small.jpg 1200w, img/projects/KM15_fallback.jpg 800w"
-                        sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-                    <div class="showcase-tag h4">nuo 900 Eur/m&sup2;</div>
-                    <div class="showcase-text-container">
-                        <div class="showcase-text">
-                            <p class="h3 showcase-name">KM 15</p>
-                            <p class="text18 showcase-about">
-                                Standartinių modulių pavyzdžiai, lengvai jungiami
-                                vienas su kitu, puikiai tinka biurams, prekyvietėm.
-                            </p>
-                        </div>
-                        <div class="m2">
-                            <div class="showcase-dimensions">
-                                <p class="h3">43,2<span class="text18">m&sup2;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="showcase-container showcase-medium shadow">
-                    <img class="showcase-image" style="aspect-ratio:1/0.65" src="img/projects/BlueLine_fallback.jpg" alt=""
-                        srcset="img/projects/BlueLine.jpg 1920w, img/projects/BlueLine_small.jpg 1200w, img/projects/BlueLine_fallback.jpg 800w"
-                        sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-                    <div class="showcase-tag h4">nuo 900 Eur/m&sup2;</div>
-                    <div class="showcase-text-container">
-                        <div class="showcase-text">
-                            <p class="h3 showcase-name">Blue Line</p>
-                            <p class="text18 showcase-about">
-                                Standartinių modulių pavyzdžiai, lengvai jungiami
-                                vienas su kitu, puikiai tinka biurams, prekyvietėm.
-                            </p>
-                        </div>
-                        <div class="m2">
-                            <div class="showcase-dimensions">
-                                <p class="h3">2,62<span class="text18">m&sup2;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="storage-offer-button">
-                <button class="btn light medium bordered h4">
-                    <span class="p">
-                        Visi moduliai
-                    </span>
-                    <span class="icon arrow"></span>
-                </button>
-            </div>
-            <div class="section-end"></div>
-        </div>
-    </div>
-    
-    <!-- ABOUT -->
-    
-    <div id="about">
-        <div class="wrapped">
-            <div id="about-content">
-                <div id="text-about" class="text-container">
-                    <p class="h2">Apie mus</p>
-                    <p class="text18 about">UAB „Baltic Modules“ – tai dukterinė Danijos kompanijos įmonė, Lietuvoje
-                        gyvuojanti jau 10 metų. Per šiuos metus
-                        sugebėjome įgyti pakankamai patirties, kad galėtumėme pasiūlyti aukštą kokybę atitinkantį produktą.
-                        Mūsų
-                        įmonėje nuolat
-                        dirba apie 30 žmonių, kurie yra kvalifikuoti savo sričių specialistai. Mes padėsime Jums realizuoti
-                        savo
-                        idėjas,
-                        pasidalinsime savo žiniomis ir sukaupta patirtimi norėdami padėti rasti Jums optimaliausią, Jūsų
-                        norus
-                        atitinkantį
-                        variantą</p>
-                    <button class="btn light text special no-bg h4">
-                        <span class="t">
-                            Plačiau apie mus
-                        </span>
-                        <span class="icon arrow"></span>
-                    </button>
-                </div>
-                <div id="manufacture" class="text-container">
-                    <p class="h2">Gamyba</p>
-                    <p class="text18 about">Vakarų Europa jau senai žengia koja kojon su technologijomis, mada,
-                        neapsunkina savo gyvenimo ilgais pasiruošimo ir
-                        statybos procesais norint pasirūpinti nuosavu gyvenamuoju namu, administracinėmis ar
-                        komercinėmis
-                        patalpomis – jie
-                        renkasi modulius.</p>
-                    <button class="btn light text special no-bg h4">
-                        <span class="t">
-                            Plačiau apie gamybą
-                        </span>
-                        <span class="icon arrow"></span>
-                    </button>
-                </div>
-                <div class="img-container">
-                    <img id="guy-img" style="aspect-ratio:1/1.5 ;" src="img/projects/Guy_fallback.jpg" alt=""
-                        srcset="img/projects/Guy.jpg 1920w, img/projects/Guy_small.jpg 1200w,  img/projects/Guy_fallback.jpg 800w"
-                        sizes="(max-width: 860px) 800px, (max-width: 1100px) 1200px, 100vw">
-                </div>
-                <div class="section-end"></div>
-            </div>
-        </div>
-    </div>
-    <!-- FOOTER -->
-    
-    <div id="footer">
-        <div id="footer-bg-container">
-            <div class="footer-bg"></div>
-            <div class="wrapped">
-                <div id="contact-area">
-                    <div class="contact-container">
-                        <div class="contact-items">
-                            <input class="btn h4" type="text" name="Contact" id="footer-contact-input"
-                            placeholder="Jūsų telefonas arba el. paštas">
-                            <button class="btn long dark h4">
-                                <span class="icon chat"></span>
-                                <span class="p"> Gauti pasiūlymą</span>
-                            </button>
-                        </div>
-                        <div id="contact-area-bg"></div>
-                    </div>
-                </div>
-                <div id="links-area">
-                    <div id="baltic-modules" class="contacts footer-item">
-                        <div class="contacts">
-                            <div class="h4 footer-link">+370 650 70474</div>
-                            <div class="text18 footer-link">info@balticmodules.lt</div>
-                        </div>
-                        <div class="footer-link waypoint">
-                            <div id="icon-waypoint" class="address"></div>
-                            <p id="address-text" class='text14 address'>Vaidaugų g. 1, Toleikių km., Dovilų sen., LT-95387, Klaipėdos raj.</p>
-                        </div>
-                    </div>
-                    <div id="quality-certs" class="footer-item">
-                        <p id="quality-certs-title" class="h4 link ft-text">Kokybės sertifikatai</p>
-                        <div id="certs-logos">
-                            <div class="cert" id="cert1"></div>
-                            <div class="cert" id="cert2"></div>
-                            <div class="cert" id="cert3"></div>
-                        </div>
-                    </div>
-                    <div id="extra-links" class="footer-item">
-                        <div id="fb-logo" class="socials footer-link"></div>
-                        <div id="youtube-logo" class="socials footer-link"></div>
-                        <p id="cwr" class="text14 ft-text">&copy; 2019 UAB Baltic Modules</p>
-                        <div id="creator">
-                            <p class="text14 ft-text creator" id="created-by">Sukūrė</p>
-                            <div id="creative-logo" class="footer-link creator"></div>                    </div>
-                    </div>
-            </div>
-            <div id="footer-contact2">
-                <button class="btn large blue footer h4">
-                    <span class="icon chat"></span>
-                    <span class="p">Klauskite mūsų</span>
-                </button>
-            </div>
-        </div>
-        <div class="section-end"></div>
-    </div>
-</div>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
