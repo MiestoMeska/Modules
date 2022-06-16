@@ -641,7 +641,7 @@ ul {
 
 .btn:hover.light {
   color: #FFFFFF;
-  border-color: #333333;
+  border: none;
   background-color: #333333; }
   .btn:hover.light.special {
     color: #00A6CC; }
