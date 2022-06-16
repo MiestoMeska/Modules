@@ -21,60 +21,60 @@
     </div> -->
     <!-- NAV BAR -->
 
-    <div id="page" class="site">
-        <div id="nav-bar">
-            <div id="nav-container">
-                <div id="nav-logo-container">
-                    <img id="nav-logo" style="aspect-ratio: 4/1;" src="img/logos/BM_logo_full.svg"
-                        alt="UAB Baltic Modules">
+    <div id="nav-bar">
+        <div id="nav-container">
+            <div id="nav-logo-container">
+                <img id="nav-logo" style="aspect-ratio: 4/1;" src="img/logos/BM_logo_full.svg"
+                    alt="UAB Baltic Modules">
+            </div>
+            <div id="mobile-menu" onclick="mobileMenuToggle()">
+                <div id="bar-1"></div>
+                <div id="bar-2"></div>
+                <div id="bar-3"></div>
+            </div>
+            <div id="nav-links-container">
+                <div id="nav-menu" class="nav-menu h4 nav-item">
+                    <ul>
+                        <li class="nav-link-container">
+                            <a class="nav-link" href="#projects-completed" onclick="mobileMenuClose()">Gaminiai</a>
+                        </li>
+                        <li class="nav-link-container">
+                            <a class="nav-link" href="#about" onclick="mobileMenuClose()">Apie mus</a>
+                        </li>
+                        <li class="nav-link-container">
+                            <a class="nav-link" href="#special-projects" onclick="mobileMenuClose()">Gamyba</a>
+                        </li>
+                        <li class="nav-link-container">
+                            <a class="nav-link" href="#modular-rent" onclick="mobileMenuClose()">Nuoma</a>
+                        </li>
+                        <li class="nav-link-container">
+                            <a class="nav-link" href="#footer" onclick="mobileMenuClose()">Kontaktai</a>
+                        </li>
+                    </ul>
                 </div>
-                <div id="mobile-menu" onclick="mobileMenuToggle()">
-                    <div id="bar-1"></div>
-                    <div id="bar-2"></div>
-                    <div id="bar-3"></div>
-                </div>
-                <div id="nav-links-container">
-                    <div id="nav-menu" class="nav-menu h4 nav-item">
-                        <ul>
-                            <li class="nav-link-container">
-                                <a class="nav-link" href="#projects-completed" onclick="mobileMenuClose()">Gaminiai</a>
-                            </li>
-                            <li class="nav-link-container">
-                                <a class="nav-link" href="#about" onclick="mobileMenuClose()">Apie mus</a>
-                            </li>
-                            <li class="nav-link-container">
-                                <a class="nav-link" href="#special-projects" onclick="mobileMenuClose()">Gamyba</a>
-                            </li>
-                            <li class="nav-link-container">
-                                <a class="nav-link" href="#modular-rent" onclick="mobileMenuClose()">Nuoma</a>
-                            </li>
-                            <li class="nav-link-container">
-                                <a class="nav-link" href="#footer" onclick="mobileMenuClose()">Kontaktai</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="lang-container nav-item">
-                        <div id="lang-dropdown" class="lang-dropdown h4" onmouseleave="langSelectClose()">
-                            <div id="lang-LT" class="lang-select lang-current flex centered"
-                                onclick="langSelectToggle()">
-                                <img id="globe" src="img/icons/Globe.svg" alt="">LT&nbsp;&nbsp;
-                                <img id="arrow_d" src="img/icons/Arrow_d.svg" alt="">
-                            </div>
-                            <div id="lang-EN" class="hide lang-select" onclick="langSelectToggle(), mobileMenuClose()">
-                                <div class="lang-option">EN</div>
-                            </div>
-                            <div id="lang-RU" class="hide lang-select" onclick="langSelectToggle(), mobileMenuClose()">
-                                <div class="lang-option"> RU</div>
-                            </div>
+                <div class="lang-container nav-item">
+                    <div id="lang-dropdown" class="lang-dropdown h4" onmouseleave="langSelectClose()">
+                        <div id="lang-LT" class="lang-select lang-current flex centered"
+                            onclick="langSelectToggle()">
+                            <img id="globe" src="img/icons/Globe.svg" alt="">LT&nbsp;&nbsp;
+                            <img id="arrow_d" src="img/icons/Arrow_d.svg" alt="">
+                        </div>
+                        <div id="lang-EN" class="hide lang-select" onclick="langSelectToggle(), mobileMenuClose()">
+                            <div class="lang-option">EN</div>
+                        </div>
+                        <div id="lang-RU" class="hide lang-select" onclick="langSelectToggle(), mobileMenuClose()">
+                            <div class="lang-option"> RU</div>
                         </div>
                     </div>
-                    <button id="nav-button" class="btn medium bordered light nav-item">
-                        <span class="icon chat"></span>
-                        <span class="p h4">Gauti pasiūlymą</span>
-                    </button>
                 </div>
+                <button id="nav-button" class="btn medium bordered light nav-item">
+                    <span class="icon chat"></span>
+                    <span class="p h4">Gauti pasiūlymą</span>
+                </button>
             </div>
         </div>
+    </div>
+    <div id="page" class="site">
 
         <!-- LANDING -->
         <div id="landing-about">
