@@ -904,6 +904,8 @@ ul {
   .nav-link-container {
     display: block;
     height: 80px; }
+  #nav-menu {
+    margin-bottom: 30px; }
   .filter {
     display: block; }
   #cwr {
